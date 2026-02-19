@@ -4,6 +4,7 @@
 /* CSS Variables for Design System */
 :root {
     /* Light Mode Colors - Fixed Values */
+    --white: #ffffff;
     --primary-color: #2563EB;
     --secondary-color: #10B981;
     --background-color: #F9FAFB;
@@ -217,13 +218,6 @@ main {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
 }
 
 /* Features Section */
