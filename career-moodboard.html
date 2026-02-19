@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Moodboard - AI Job Prep Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="logo.svg" alt="Logo" class="logo-img">
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cv-feedback.html" class="nav-link">CV Feedback</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="interview-questions.html" class="nav-link">Interview Questions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pitch-trainer.html" class="nav-link">Pitch Trainer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="career-moodboard.html" class="nav-link active">Career Moodboard</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title">Visualize your career goals</h1>
+                <p class="hero-description">Search images and build your personal career moodboard with inspiration powered by Unsplash.</p>
+            </div>
+        </section>
+
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="container">
+                <div class="search-container">
+                    <div class="search-input-group">
+                        <input type="text" id="searchInput" class="search-input" placeholder="Search career inspiration...">
+                        <button id="searchBtn" class="btn btn-primary">Search Images</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Results Grid -->
+        <section class="image-results">
+            <div class="container">
+                <div id="loading" class="loading" style="display: none;">
+                    <p>Searching for images...</p>
+                </div>
+                <div id="results" class="results-grid"></div>
+                <div class="load-more-container" style="display: none;">
+                    <button id="load-more-btn" class="btn btn-load-more">Load More</button>
+                    <p id="no-more-results" class="no-more-message" style="display: none;">No more images available.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Moodboard Section -->
+        <section class="moodboard-section">
+            <div class="container">
+                <div class="moodboard-header">
+                    <h2>Your Career Moodboard</h2>
+                    <button id="export-btn" class="btn btn-secondary">Export Moodboard</button>
+                </div>
+                <div id="moodboard" class="moodboard-canvas">
+                    <div class="empty-moodboard">
+                        <p>Start building your moodboard by searching and adding images above.</p>
+                    </div>
+                </div>
+                <div id="export-options" class="export-options" style="display: none;">
+                    <h3>Export Options</h3>
+                    <button id="export-png" class="btn btn-primary">Download as PNG</button>
+                    <button id="export-pdf" class="btn btn-primary">Download as PDF</button>
+                    <button id="cancel-export" class="btn btn-secondary">Cancel</button>
+                </div>
+                <div id="export-message" class="export-message" style="display: none;">
+                    <p>Your moodboard has been downloaded successfully.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="logo.svg" alt="AI Job Prep Tool" class="footer-logo-img">
+                        <span class="footer-logo-text">AI Job Prep Tool</span>
+                    </div>
+                    <p class="footer-description">Prepare smart with AI-powered tools for your next career opportunity.</p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="cv-feedback.html" class="footer-link">CV Feedback</a></li>
+                        <li><a href="interview-questions.html" class="footer-link">Interview Questions</a></li>
+                        <li><a href="pitch-trainer.html" class="footer-link">Pitch Trainer</a></li>
+                        <li><a href="career-moodboard.html" class="footer-link">Career Moodboard</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Connect</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <img src="linkedin-icon.svg" alt="LinkedIn" class="social-icon">
+                        </a>
+                        <a href="#" class="social-link">
+                            <img src="github-icon.svg" alt="GitHub" class="social-icon">
+                        </a>
+                    </div>
+                    <p class="contact-info">hello@aijobprep.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AI Job Prep Tool. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+    <script src="career-moodboard.js"></script>
+</body>
+</html>
